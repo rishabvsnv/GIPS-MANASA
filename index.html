@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gyanodaya Institute of Professional Studies</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    :root{
+      --primary:#1d4ed8;
+      --secondary:#0f172a;
+      --light:#f8fafc;
+      --white:#ffffff;
+      --text:#475569;
+      --border:#e2e8f0;
+      --shadow:0 10px 35px rgba(0,0,0,0.08);
+      --radius:18px;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--light);
+      color:var(--secondary);
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      font-weight:800;
+      margin-bottom:15px;
+      color:var(--secondary);
+    }
+
+    .section-title p{
+      color:var(--text);
+      max-width:700px;
+      margin:auto;
+      line-height:1.8;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      padding:18px 0;
+      transition:0.4s;
+    }
+
+    .navbar-brand{
+      font-size:28px;
+      font-weight:800;
+      color:var(--primary);
+    }
+
+    .nav-link{
+      color:var(--secondary);
+      font-weight:500;
+      margin-left:18px;
+      transition:0.3s;
+    }
+
+    .nav-link:hover{
+      color:var(--primary);
+    }
+
+    .btn-main{
+      background:var(--primary);
+      color:white;
+      border:none;
+      padding:14px 30px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn-main:hover{
+      background:#0b43c9;
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    .btn-outline-custom{
+      border:2px solid white;
+      color:white;
+      padding:14px 30px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn-outline-custom:hover{
+      background:white;
+      color:var(--primary);
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(2,6,23,0.75), rgba(2,6,23,0.75)),
+      url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1800&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero h1{
+      color:white;
+      font-size:68px;
+      font-weight:800;
+      line-height:1.2;
+      margin-bottom:25px;
+    }
+
+    .hero p{
+      color:#e2e8f0;
+      font-size:18px;
+      line-height:1.9;
+      margin-bottom:35px;
+      max-width:700px;
+    }
+
+    .hero-badge{
+      display:inline-block;
+      background:rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.2);
+      color:white;
+      padding:10px 18px;
+      border-radius:50px;
+      margin-bottom:30px;
+      backdrop-filter:blur(10px);
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:25px;
+      padding:30px;
+      color:white;
+    }
+
+    .hero-card h4{
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    .hero-card .info{
+      margin-bottom:16px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    /* STATS */
+
+    .stats{
+      margin-top:-70px;
+      position:relative;
+      z-index:10;
+    }
+
+    .stats-wrapper{
+      background:white;
+      border-radius:25px;
+      padding:40px;
+      box-shadow:var(--shadow);
+    }
+
+    .stat-card{
+      text-align:center;
+      padding:20px;
+    }
+
+    .stat-card h2{
+      font-size:48px;
+      font-weight:800;
+      color:var(--primary);
+      margin-bottom:10px;
+    }
+
+    .stat-card p{
+      color:var(--text);
+      margin:0;
+      font-weight:500;
+    }
+
+    /* ABOUT */
+
+    .about-img img{
+      width:100%;
+      border-radius:25px;
+      box-shadow:var(--shadow);
+    }
+
+    .about-content h3{
+      font-size:42px;
+      font-weight:800;
+      margin-bottom:25px;
+    }
+
+    .about-content p{
+      color:var(--text);
+      line-height:1.9;
+      margin-bottom:20px;
+    }
+
+    .feature-box{
+      display:flex;
+      gap:18px;
+      margin-bottom:22px;
+    }
+
+    .feature-icon{
+      min-width:55px;
+      height:55px;
+      background:var(--primary);
+      color:white;
+      border-radius:15px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+    }
+
+    /* COURSES */
+
+    .course-card{
+      background:white;
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:0.4s;
+      height:100%;
+    }
+
+    .course-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .course-card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+    }
+
+    .course-content{
+      padding:30px;
+    }
+
+    .course-content h3{
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    .course-content p{
+      color:var(--text);
+      line-height:1.8;
+    }
+
+    /* FACILITIES */
+
+    .facility-card{
+      background:white;
+      border-radius:20px;
+      padding:35px;
+      text-align:center;
+      transition:0.4s;
+      box-shadow:var(--shadow);
+      height:100%;
+    }
+
+    .facility-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .facility-icon{
+      width:80px;
+      height:80px;
+      margin:auto;
+      background:rgba(37,99,235,0.1);
+      color:var(--primary);
+      border-radius:20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:34px;
+      margin-bottom:25px;
+    }
+
+    .facility-card h4{
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    .facility-card p{
+      color:var(--text);
+      line-height:1.8;
+    }
+
+    /* GALLERY */
+
+    .gallery-item{
+      overflow:hidden;
+      border-radius:22px;
+      position:relative;
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+      transition:0.5s;
+    }
+
+    .gallery-item:hover img{
+      transform:scale(1.1);
+    }
+
+    /* TEAM */
+
+    .team-card{
+      background:white;
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      text-align:center;
+      transition:0.4s;
+    }
+
+    .team-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .team-card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
+
+    .team-content{
+      padding:25px;
+    }
+
+    .team-content h4{
+      font-weight:700;
+      margin-bottom:5px;
+    }
+
+    .team-content p{
+      color:var(--text);
+      margin:0;
+    }
+
+    /* CTA */
+
+    .cta{
+      background:
+      linear-gradient(rgba(29,78,216,0.9), rgba(29,78,216,0.9)),
+      url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1600&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+      color:white;
+      border-radius:30px;
+      padding:80px 60px;
+      text-align:center;
+    }
+
+    .cta h2{
+      font-size:52px;
+      font-weight:800;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      max-width:800px;
+      margin:auto;
+      line-height:1.9;
+      margin-bottom:35px;
+    }
+
+    /* CONTACT */
+
+    .contact-card{
+      background:white;
+      border-radius:22px;
+      padding:40px;
+      box-shadow:var(--shadow);
+      height:100%;
+    }
+
+    .contact-card h4{
+      font-weight:700;
+      margin-bottom:25px;
+    }
+
+    .contact-info{
+      display:flex;
+      gap:15px;
+      margin-bottom:22px;
+    }
+
+    .contact-icon{
+      width:50px;
+      height:50px;
+      border-radius:15px;
+      background:rgba(37,99,235,0.1);
+      color:var(--primary);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:20px;
+    }
+
+    .form-control{
+      height:56px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      margin-bottom:20px;
+    }
+
+    textarea.form-control{
+      height:140px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#020617;
+      color:#cbd5e1;
+      padding:80px 0 20px;
+    }
+
+    .footer-logo{
+      font-size:32px;
+      font-weight:800;
+      color:white;
+      margin-bottom:20px;
+    }
+
+    .footer-title{
+      color:white;
+      font-weight:700;
+      margin-bottom:25px;
+    }
+
+    .footer-links a{
+      display:block;
+      color:#cbd5e1;
+      margin-bottom:12px;
+      transition:0.3s;
+    }
+
+    .footer-links a:hover{
+      color:white;
+      padding-left:5px;
+    }
+
+    .social-links a{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      background:rgba(255,255,255,0.1);
+      color:white;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      margin-right:10px;
+      transition:0.3s;
+    }
+
+    .social-links a:hover{
+      background:var(--primary);
+    }
+
+    .copyright{
+      border-top:1px solid rgba(255,255,255,0.1);
+      margin-top:50px;
+      padding-top:25px;
+      text-align:center;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:991px){
+
+      .hero{
+        padding:120px 0;
+      }
+
+      .hero h1{
+        font-size:46px;
+      }
+
+      .section-title h2{
+        font-size:34px;
+      }
+
+      .about-content{
+        margin-top:40px;
+      }
+
+      .cta{
+        padding:60px 25px;
+      }
+
+      .cta h2{
+        font-size:36px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+
+  <div class="container">
+
+    <a class="navbar-brand" href="#">
+      GIPS Manasa
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#courses">Courses</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#facilities">Facilities</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery">Gallery</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#faculty">Faculty</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+
+        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+          <a href="#" class="btn-main">
+            Apply Now
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-7">
+
+        <div class="hero-badge">
+          NCTE Recognized Teacher Education Institute
+        </div>
+
+        <h1>
+          Shaping Future Educators With Excellence & Values
+        </h1>
+
+        <p>
+          Gyanodaya Institute of Professional Studies is committed to
+          providing quality teacher education through modern infrastructure,
+          experienced faculty, practical training, and academic excellence
+          aligned with NCTE standards.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3">
+
+          <a href="#courses" class="btn-main">
+            Explore Courses
+          </a>
+
+          <a href="#contact" class="btn-outline-custom">
+            Contact Us
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-5 mt-5 mt-lg-0">
+
+        <div class="hero-card">
+
+          <h4>Institute Highlights</h4>
+
+          <div class="info">
+            <i class="bi bi-patch-check-fill"></i>
+            <span>NCTE Approved Institution</span>
+          </div>
+
+          <div class="info">
+            <i class="bi bi-mortarboard-fill"></i>
+            <span>B.Ed & B.A.B.Ed Programmes</span>
+          </div>
+
+          <div class="info">
+            <i class="bi bi-building"></i>
+            <span>Modern Campus Infrastructure</span>
+          </div>
+
+          <div class="info">
+            <i class="bi bi-book-fill"></i>
+            <span>5000+ Library Resources</span>
+          </div>
+
+          <div class="info">
+            <i class="bi bi-people-fill"></i>
+            <span>Experienced Teaching Faculty</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+  <div class="container">
+
+    <div class="stats-wrapper">
+
+      <div class="row g-4">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card">
+            <h2>15+</h2>
+            <p>Years of Excellence</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card">
+            <h2>500+</h2>
+            <p>Students Enrolled</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card">
+            <h2>15+</h2>
+            <p>Faculty Members</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card">
+            <h2>100%</h2>
+            <p>NCTE Compliance</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+
+        <div class="about-img">
+
+          <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1400&auto=format&fit=crop" alt="College">
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="about-content">
+
+          <h3>
+            Learning Begins With Professional Excellence
+          </h3>
+
+          <p>
+            Gyanodaya Institute of Professional Studies is dedicated
+            to preparing competent, ethical, and skilled educators
+            through innovative teaching methodologies and structured
+            teacher training programmes.
+          </p>
+
+          <div class="feature-box">
+
+            <div class="feature-icon">
+              <i class="bi bi-award-fill"></i>
+            </div>
+
+            <div>
+              <h5>Academic Excellence</h5>
+              <p>
+                High-quality teacher education aligned with modern
+                academic standards and pedagogical practices.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="feature-box">
+
+            <div class="feature-icon">
+              <i class="bi bi-building-fill"></i>
+            </div>
+
+            <div>
+              <h5>Modern Infrastructure</h5>
+              <p>
+                Smart classrooms, labs, seminar halls,
+                and digital learning resources.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="feature-box">
+
+            <div class="feature-icon">
+              <i class="bi bi-file-earmark-check-fill"></i>
+            </div>
+
+            <div>
+              <h5>Mandatory Disclosure</h5>
+              <p>
+                Complete transparency regarding staff,
+                infrastructure, fees, and institutional information.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- COURSES -->
+
+<section id="courses">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Academic Programmes</h2>
+
+      <p>
+        Professional teacher education programmes designed
+        to create future-ready educators with practical
+        teaching expertise and academic excellence.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-6">
+
+        <div class="course-card">
+
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="B.Ed">
+
+          <div class="course-content">
+
+            <h3>B.Ed Programme</h3>
+
+            <p>
+              A 2-year professional teacher education programme
+              focused on pedagogy, classroom management,
+              educational psychology, and teaching practice.
+            </p>
+
+            <a href="#" class="btn-main mt-3">
+              Learn More
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="course-card">
+
+          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop" alt="B.A.B.Ed">
+
+          <div class="course-content">
+
+            <h3>B.A.B.Ed Integrated Course</h3>
+
+            <p>
+              A 4-year integrated programme combining
+              arts education with professional teacher training
+              and practical educational exposure.
+            </p>
+
+            <a href="#" class="btn-main mt-3">
+              Learn More
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FACILITIES -->
+
+<section id="facilities">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Campus Facilities</h2>
+
+      <p>
+        Providing students with a modern, supportive,
+        and technology-enabled learning environment.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="facility-card">
+
+          <div class="facility-icon">
+            <i class="bi bi-laptop"></i>
+          </div>
+
+          <h4>Computer Lab</h4>
+
+          <p>
+            Advanced computer laboratories with internet
+            access and digital learning support.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="facility-card">
+
+          <div class="facility-icon">
+            <i class="bi bi-book-half"></i>
+          </div>
+
+          <h4>Rich Library</h4>
+
+          <p>
+            Library with books, journals, research materials,
+            and educational resources.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="facility-card">
+
+          <div class="facility-icon">
+            <i class="bi bi-easel-fill"></i>
+          </div>
+
+          <h4>Smart Classrooms</h4>
+
+          <p>
+            Interactive and technology-enabled classrooms
+            for effective teaching and learning.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="facility-card">
+
+          <div class="facility-icon">
+            <i class="bi bi-people-fill"></i>
+          </div>
+
+          <h4>Seminar Hall</h4>
+
+          <p>
+            Spacious seminar and conference halls
+            for workshops and academic activities.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="facility-card">
+
+          <div class="facility-icon">
+            <i class="bi bi-clipboard2-pulse-fill"></i>
+          </div>
+
+          <h4>Psychology Lab</h4>
+
+          <p>
+            Dedicated psychology and teaching aptitude
+            laboratory for practical exposure.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="facility-card">
+
+          <div class="facility-icon">
+            <i class="bi bi-shield-check"></i>
+          </div>
+
+          <h4>Safe Campus</h4>
+
+          <p>
+            Student-friendly and secure campus environment
+            focused on discipline and holistic development.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Campus Gallery</h2>
+
+      <p>
+        Explore our classrooms, academic activities,
+        infrastructure, and student environment.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FACULTY -->
+
+<section id="faculty">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Our Faculty</h2>
+
+      <p>
+        Dedicated educators and academic professionals committed
+        to excellence in teacher education.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="team-card">
+
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" alt="">
+
+          <div class="team-content">
+
+            <h4>Dr. Rajesh Sharma</h4>
+
+            <p>Principal</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="team-card">
+
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop" alt="">
+
+          <div class="team-content">
+
+            <h4>Dr. Neha Verma</h4>
+
+            <p>Assistant Professor</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="team-card">
+
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop" alt="">
+
+          <div class="team-content">
+
+            <h4>Prof. Amit Joshi</h4>
+
+            <p>Academic Coordinator</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+
+<section>
+
+  <div class="container">
+
+    <div class="cta">
+
+      <h2>
+        Admissions Open For 2026 Session
+      </h2>
+
+      <p>
+        Begin your journey toward becoming a professional educator
+        with quality teacher education, practical learning,
+        and academic excellence at GIPS Manasa.
+      </p>
+
+      <a href="#contact" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-semibold">
+        Apply For Admission
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Contact Us</h2>
+
+      <p>
+        Reach out to us for admission enquiries,
+        course details, or institutional information.
+      </p>
+
+    </div>
+
+    <div class="row g-5">
+
+      <div class="col-lg-5">
+
+        <div class="contact-card">
+
+          <h4>Institute Information</h4>
+
+          <div class="contact-info">
+
+            <div class="contact-icon">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+
+            <div>
+              <h6>Address</h6>
+              <p>Gyanodaya Institute of Professional Studies, Manasa, Madhya Pradesh</p>
+            </div>
+
+          </div>
+
+          <div class="contact-info">
+
+            <div class="contact-icon">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+
+            <div>
+              <h6>Phone</h6>
+              <p>+91 7441196373<br>+91 9413403192</p>
+            </div>
+
+          </div>
+
+          <div class="contact-info">
+
+            <div class="contact-icon">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+
+            <div>
+              <h6>Email</h6>
+              <p>gipsmanasa@gmail.com</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-7">
+
+        <div class="contact-card">
+
+          <h4>Send Message</h4>
+
+          <form>
+
+            <div class="row">
+
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+
+              <div class="col-md-6">
+                <input type="email" class="form-control" placeholder="Your Email">
+              </div>
+
+            </div>
+
+            <input type="text" class="form-control" placeholder="Subject">
+
+            <textarea class="form-control" placeholder="Your Message"></textarea>
+
+            <button class="btn-main">
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="row g-5">
+
+      <div class="col-lg-4">
+
+        <div class="footer-logo">
+          GIPS Manasa
+        </div>
+
+        <p>
+          Gyanodaya Institute of Professional Studies is committed
+          to developing skilled, ethical, and professional educators
+          through excellence in teacher education.
+        </p>
+
+        <div class="social-links mt-4">
+
+          <a href="#">
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a href="#">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a href="#">
+            <i class="bi bi-youtube"></i>
+          </a>
+
+          <a href="#">
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-2 col-md-6">
+
+        <h5 class="footer-title">
+          Quick Links
+        </h5>
+
+        <div class="footer-links">
+
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#courses">Courses</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#faculty">Faculty</a>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+
+        <h5 class="footer-title">
+          Courses
+        </h5>
+
+        <div class="footer-links">
+
+          <a href="#">B.Ed Programme</a>
+          <a href="#">B.A.B.Ed</a>
+          <a href="#">Teacher Training</a>
+          <a href="#">Workshops</a>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-3">
+
+        <h5 class="footer-title">
+          Contact
+        </h5>
+
+        <div class="footer-links">
+
+          <a href="#">
+            +91 7441196373
+          </a>
+
+          <a href="#">
+            +91 9413403192
+          </a>
+
+          <a href="#">
+            gipsmanasa@gmail.com
+          </a>
+
+          <a href="#">
+            Manasa, Madhya Pradesh
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+
+      <p>
+        © 2026 Gyanodaya Institute of Professional Studies.
+        All Rights Reserved.
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
