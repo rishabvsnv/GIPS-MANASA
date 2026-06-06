@@ -87,40 +87,194 @@
         </div>
       </div>
     </nav>
-    <!-- HERO -->
-    <section class="hero-section d-flex align-items-center">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-7 text-white" data-aos="fade-right">
-            <span
-              class="badge bg-light text-primary px-3 py-2 rounded-pill mb-3"
+    
+    <!-- HERO SLIDER -->
+    <section class="hero-slider">
+      <div
+        id="heroCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+        <!-- Indicators -->
+
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="1"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <!-- SLIDE 1 -->
+
+          <div class="carousel-item active">
+            <div
+              class="hero-slide d-flex align-items-center"
+              style="
+                background:
+                  linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+                  url(assets/images/gips.png) center/cover no-repeat;
+                min-height: 92vh;
+              "
             >
-              NCTE Approved Institution
-            </span>
-            <h1 class="display-3 fw-bold mb-4">
-              Shaping Future Educators With Excellence
-            </h1>
-            <p class="lead mb-4">
-              Gyanodaya Institute of Professional Studies provides professional
-              teacher education with modern infrastructure, practical learning,
-              and experienced faculty.
-            </p>
-            <div class="d-flex flex-wrap gap-3">
-              <a
-                href="courses.html"
-                class="btn btn-primary btn-lg rounded-pill px-4"
-              >
-                Explore Courses
-              </a>
-              <a
-                href="contact.html"
-                class="btn btn-outline-light btn-lg rounded-pill px-4"
-              >
-                Contact Us
-              </a>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7 text-white">
+                    <span
+                      class="badge bg-light text-primary px-4 py-2 rounded-pill mb-4"
+                    >
+                      NCTE Approved Institution
+                    </span>
+
+                    <h1 class="display-3 fw-bold mb-4">
+                      Shaping Future Educators
+                    </h1>
+
+                    <p class="lead mb-4">
+                      Professional teacher education with modern infrastructure,
+                      practical learning, and experienced faculty members.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3">
+                      <a
+                        href="courses.html"
+                        class="btn btn-primary btn-lg rounded-pill px-5"
+                      >
+                        Explore Courses
+                      </a>
+
+                      <a
+                        href="contact.html"
+                        class="btn btn-outline-light btn-lg rounded-pill px-5"
+                      >
+                        Contact Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 2 -->
+
+          <div class="carousel-item">
+            <div
+              class="hero-slide d-flex align-items-center"
+              style="
+                background:
+                  linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+                  url(assets/images/gips.png) center/cover
+                    no-repeat;
+                min-height: 92vh;
+              "
+            >
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7 text-white">
+                    <span
+                      class="badge bg-warning text-dark px-4 py-2 rounded-pill mb-4"
+                    >
+                      Admissions Open 2026
+                    </span>
+
+                    <h1 class="display-3 fw-bold mb-4">
+                      Learn With Excellence
+                    </h1>
+
+                    <p class="lead mb-4">
+                      Empowering future teachers with academic excellence,
+                      leadership values, and classroom expertise.
+                    </p>
+
+                    <a
+                      href="admission.html"
+                      class="btn btn-light btn-lg rounded-pill px-5"
+                    >
+                      Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 3 -->
+
+          <div class="carousel-item">
+            <div
+              class="hero-slide d-flex align-items-center"
+              style="
+                background:
+                  linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+                  url(assets/images/gips.png) center/cover
+                    no-repeat;
+                min-height: 92vh;
+              "
+            >
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7 text-white">
+                    <span class="badge bg-success px-4 py-2 rounded-pill mb-4">
+                      Modern Campus Facilities
+                    </span>
+
+                    <h1 class="display-3 fw-bold mb-4">
+                      Build A Successful Teaching Career
+                    </h1>
+
+                    <p class="lead mb-4">
+                      Practical training, experienced faculty, and professional
+                      learning environment.
+                    </p>
+
+                    <a
+                      href="about.html"
+                      class="btn btn-primary btn-lg rounded-pill px-5"
+                    >
+                      Discover More
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- CONTROLS -->
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
     </section>
     <!-- STATS -->
